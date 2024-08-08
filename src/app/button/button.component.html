@@ -1,0 +1,7 @@
+<div class="button"
+     [title]="conf.ascii"
+     (click)="onClick()"
+     style="top:{{conf.position.y}}px;left:{{conf.position.x}}px;width:{{conf.size.w}}px;height:{{conf.size.h}}px;background-color:{{conf.color}}">
+    {{conf && conf.command}}
+    <div class="dots">{{asciiCodeBinDisplay}}</div>
+</div>

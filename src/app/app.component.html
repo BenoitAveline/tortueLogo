@@ -1,0 +1,15 @@
+<main class="main">
+  <div class="content">
+    @if (!isConnected) {
+    <button (click)="getPorts()">Connection à la Tortue</button>
+    }
+    @if (isConnected) {
+    <button (click)="checkCode()">Verifier le code</button>
+    <button (click)="sendCode()">Envoyer le code</button>
+    }
+    @for (button of buttons; track button.command) {
+    <app-button [conf]="button"></app-button>
+    }
+  </div>
+</main>
+<router-outlet />
